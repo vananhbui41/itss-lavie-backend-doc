@@ -1,0 +1,12 @@
+openapi: '3.0.2'
+info:
+  title: API Login
+  version: '1.0'
+servers:
+  - url: https://lavie-backend.herokuapp.com/
+paths:
+  /api/register: 
+    $ref: 'auth/register.yml'
+      
+  /api/login:
+    $ref: 'auth/login.yml'

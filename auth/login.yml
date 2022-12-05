@@ -1,0 +1,75 @@
+post:
+      description: 'API-login'
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: example@example.com
+                password:
+                  type: string
+                  example: 123456    
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: 
+                  status: 
+                    type: string
+                    example: "Request was successfull"
+                  message:
+                    type: string
+                    example: null
+                  data:
+                    type: object
+                    properties:
+                      user: 
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 2
+                          name:
+                            type: string
+                            example: User
+                          email: 
+                            type: string
+                            example: example@example.com
+                          email_verified_at: 
+                            type: string
+                            example: example@example.com
+                          role:
+                            type: string
+                            example: user
+                          updated_at:
+                            type: datetime
+                            example: 2022-12-02T17:11:15.000000Z
+                          created_at: 
+                            type: datetime
+                            example: 2022-12-02T17:11:15.000000Z
+                      token:
+                        type: string
+                        example: "3|4K1JQxgdMg4xMpKzMiBSST6ztygPo0eqqA5LcVqq"
+        '401':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: 
+                  status: 
+                    type: string
+                    example: "Request was successfull"
+                  message:
+                    type: string
+                    example: "Credentials do not match"
+                  data:
+                    type: object
+                    example: null
