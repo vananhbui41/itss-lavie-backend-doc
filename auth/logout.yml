@@ -1,0 +1,24 @@
+get:
+  security:
+    - bearerAuth: []
+  description: 'API-logout'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties: 
+              status: 
+                type: string
+                example: "Request was successfull"
+              message:
+                type: string
+                example: null
+              data:
+                type: object
+                properties:
+                  message: 
+                    type: string
+                    example: "Logout successfull."

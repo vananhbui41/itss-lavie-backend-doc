@@ -10,3 +10,6 @@ paths:
       
   /api/login:
     $ref: 'auth/login.yml'
+
+  /api/logout:
+    $ref: 'auth/logout.yml'
